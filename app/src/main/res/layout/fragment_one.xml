@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0d1d3e">
+
+    <ImageView
+        android:id="@+id/state_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selected_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/dotted_line_1"/>
+
+    <TextView
+        android:id="@+id/state_0_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/state_0"
+        app:layout_constraintBottom_toBottomOf="@id/state_0"
+        app:layout_constraintStart_toStartOf="@id/state_0"
+        app:layout_constraintEnd_toEndOf="@id/state_0"/>
+
+    <View
+        android:id="@+id/dotted_line_1"
+        android:layout_width="30dp"
+        android:layout_height="6dp"
+        android:background="@drawable/dotted_line"
+        app:layout_constraintEnd_toStartOf="@id/state_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/state_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/unselected_background"
+        app:layout_constraintEnd_toStartOf="@id/dotted_line_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/state_1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/state_1"
+        app:layout_constraintBottom_toBottomOf="@id/state_1"
+        app:layout_constraintStart_toStartOf="@id/state_1"
+        app:layout_constraintEnd_toEndOf="@id/state_1"/>
+
+    <View
+        android:id="@+id/dotted_line_2"
+        android:layout_width="30dp"
+        android:layout_height="6dp"
+        android:background="@drawable/dotted_line"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/state_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/unselected_background"
+        app:layout_constraintStart_toEndOf="@id/dotted_line_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/state_2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/state_2"
+        app:layout_constraintBottom_toBottomOf="@id/state_2"
+        app:layout_constraintStart_toStartOf="@id/state_2"
+        app:layout_constraintEnd_toEndOf="@id/state_2"/>
+
+    <View
+        android:id="@+id/dotted_line_3"
+        android:layout_width="30dp"
+        android:layout_height="6dp"
+        android:background="@drawable/dotted_line"
+        app:layout_constraintStart_toEndOf="@id/state_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/state_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/unselected_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dotted_line_3"/>
+
+    <TextView
+        android:id="@+id/state_3_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/state_3"
+        app:layout_constraintBottom_toBottomOf="@id/state_3"
+        app:layout_constraintStart_toStartOf="@id/state_3"
+        app:layout_constraintEnd_toEndOf="@id/state_3"/>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_continue"
+        android:layout_marginBottom="32dp"
+        android:text="@string/back"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:background="@drawable/button_background"
+        android:padding="16dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        android:layout_marginBottom="32dp"
+        android:text="@string/next"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background"
+        android:textAllCaps="false"
+        android:padding="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- In order to apply a custom background to the status bar,
+    a 24dp height space should be left blank at the top,
+    and other parts of the customized layout should be aligned towards the bottom  -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@drawable/gradient_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?actionBarSize">
+
+            <View
+                android:id="@+id/view_statusbar_space"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:background="@drawable/gradient_background"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_app_bar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom Appbar Title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_statusbar_space"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:paddingTop="8dp"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.TabStyle"
+                app:layout_constraintTop_toBottomOf="@id/tv_app_bar_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab 1"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab 2"/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/tab_item"/>
+<!--                Tab item can be custimize by setting its layout to a custom one-->
+            </com.google.android.material.tabs.TabLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
