@@ -97,7 +97,7 @@ class TabOneFragment : Fragment() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState?.run {
+        outState.run {
             putInt(STATE, state)
             putInt(PREV_STATE, prevState)
         }

@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
 
         viewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
 
+        viewPager!!.offscreenPageLimit = 3
+
         tabLayout!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabReselected(tab: TabLayout.Tab?) {}
 
